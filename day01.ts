@@ -1,4 +1,4 @@
-const parse = (input: string): Array<Array<number>> => {
+export const parse = (input: string): Array<Array<number>> => {
   return input.split('\n\n').map((x) => {
     return x.split('\n').map(y => {
       return parseInt(y, 10)
@@ -6,7 +6,7 @@ const parse = (input: string): Array<Array<number>> => {
   })
 }
 
-const top3Sum = (input: Array<Array<number>>): number => {
+export const top3Sum = (input: Array<Array<number>>): number => {
   const sums = input.map(x => x.reduce((acc, curr) => acc + curr, 0))
 
   const top1 = Math.max(...sums);
